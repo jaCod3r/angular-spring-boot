@@ -1,7 +1,7 @@
 package app.ajuber.angularappwithspringboot.rest;
 
-import app.ajuber.angularappwithspringboot.request.ReservationRequest;
-import app.ajuber.angularappwithspringboot.response.ReservationResponse;
+import app.ajuber.angularappwithspringboot.model.request.ReservationRequest;
+import app.ajuber.angularappwithspringboot.model.response.ReservationResponse;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -26,13 +26,25 @@ public class ReservationResource {
         return new ResponseEntity(new ReservationResponse(), HttpStatus.OK);
     }
 
-    @RequestMapping(path="", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(path="", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+            consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<ReservationResponse> createReservation(
-            @RequestBody ReservationRequest reservationRequest) {
+            @RequestBody
+                    ReservationRequest reservationRequest ) {
         return new ResponseEntity<>(new ReservationResponse(), HttpStatus.CREATED);
 
     }
 
+/*
+
+@RequestMapping(path="", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_UTF8_VALUE, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+public ResponseEntity<ReservationResponse> updateReservation(
+@RequestBody
+ReservationRequest reservationRequest ) {
+return new ResponseEntity<>(new ReservationResponse(), HttpStatus.OK);
+
+}
+*/
 
 
 }

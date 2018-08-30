@@ -1,4 +1,4 @@
-package app.ajuber.angularappwithspringboot.response;
+package app.ajuber.angularappwithspringboot.model.response;
 
 import app.ajuber.angularappwithspringboot.model.Links;
 
@@ -10,7 +10,7 @@ public class ReservationResponse {
     private Links links;
 
     public ReservationResponse() {
-        super();
+
     }
 
     public ReservationResponse(Integer roomNumber, Integer price) {
