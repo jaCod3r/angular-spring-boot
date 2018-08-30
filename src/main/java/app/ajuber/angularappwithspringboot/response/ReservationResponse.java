@@ -1,12 +1,13 @@
 package app.ajuber.angularappwithspringboot.response;
 
-import sun.awt.image.ImageWatched;
+import app.ajuber.angularappwithspringboot.model.Links;
 
+;
 public class ReservationResponse {
     private Long id;
     private Integer roomNumber;
     private Integer price;
-    private ImageWatched.Link links;
+    private Links links;
 
     public ReservationResponse() {
         super();
@@ -42,11 +43,11 @@ public class ReservationResponse {
         this.price = price;
     }
 
-    public ImageWatched.Link getLinks() {
+    public Links getLinks() {
         return links;
     }
 
-    public void setLinks(ImageWatched.Link links) {
+    public void setLinks(Links links) {
         this.links = links;
     }
 }
