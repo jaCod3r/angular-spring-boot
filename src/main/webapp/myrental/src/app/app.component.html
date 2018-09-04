@@ -57,15 +57,22 @@
         
       </div>
 
+      <h1>Available Rooms</h1>
+
       <div class="row">
         <div class="col-12">
           <div class="table-responsive">
             <table class="table">
               <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr *ngFor="let room of rooms">
+                <td><img src="src/app/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures"></td>
+                <td>
+                  <strong>Room #  {{room.roomNumber}}</strong><br>
+                  <strong>Price: ${{room.price}}</strong>
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-primary" (click)="reserveRoom(room.id)">Reserve</button>
+                </td>
               </tr>
               </tbody>
             </table>
