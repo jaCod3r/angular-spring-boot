@@ -13,6 +13,9 @@ public class RoomEntity {
     @NotNull
     private Integer roomNumber;
 
+    @NotNull
+    private String price;
+
     public RoomEntity() {
     }
 
@@ -21,8 +24,13 @@ public class RoomEntity {
         this.price = price;
     }
 
-    @NotNull
-    private String price;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Integer getRoomNumber() {
         return roomNumber;
