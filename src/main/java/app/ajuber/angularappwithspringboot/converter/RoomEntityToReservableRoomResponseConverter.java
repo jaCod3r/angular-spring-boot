@@ -10,7 +10,7 @@ import org.springframework.core.convert.converter.Converter;
 
 
 
-public class RoomEntityToReservationResponseConverter implements Converter<RoomEntity, ReservationResponse> {
+public class RoomEntityToReservableRoomResponseConverter implements Converter<RoomEntity, ReservationResponse> {
 
 
     @Override
